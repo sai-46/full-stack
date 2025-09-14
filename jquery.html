@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <h2>say hi!</h2>
+        <button id="btn">Click Me</button>
+        <div class="temp">
+            <p>iam introducing you to the world</p>    
+        </div>
+        <input type="text" id="hello">
+        <p id="para">Hi this is sara</p>
+        <ul id="list">
+  <li>good morning</li>
+</ul>
+<button id="add">Add Item</button>
+<button id="addf">Add Item first</button>
+<button id="remove">Remove First</button>
+<script>
+    $(document).ready(function(){
+      $("#btn").click(function(){
+        $("h1").text("Button Clicked!");
+        $("h2").text("Button Clicked! Duplicate");
+        $(".temp").css("background-color", "yellow");
+        $("p").css("font-weight", "bold");
+      });
+
+
+
+    $("#add").click(function(){
+      $("#list").append("<li>glad to met you</li>");
+    });
+    $("#addf").click(function(){
+      $("#list").prepend("<li>hlo everyone</li>");
+    });
+    $("#remove").click(function(){
+      $("#list li:first").remove();
+    });
+ 
+
+      $("#hello").keydown(function(){
+      let val = $("#hello").val();
+      $("#para").text(val);
+    });
+      $("#btn").dblclick(function(){
+        $("h1").text("Button Clicked Twice!");
+        $("h2").text("Button Clicked! Twice Duplicate");
+        $(".temp").css("background-color", "orange");
+        $("p").css("font-weight", "calibri");
+      });
+      $("#btn").hover(function(){
+        $("h1").text("Button Clicked but Hovered!");
+        $("h2").text("Button  and Hovered! Duplicate");
+        $(".temp").css("background-color", "cyan");
+        $("p").css("font-weight", "italic");
+      });
+    });
+  </script>
+         </body>
+</html>
